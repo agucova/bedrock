@@ -76,8 +76,8 @@
       "phpcs"
     ],
     "l10n": [
-      "curl -o l10n.tar.gz https://download.civicrm.org/civicrm-5.11.0-l10n.tar.gz",
-      "tar -xvzf l10n.tar.gz -C web/app/plugins/civicrm/civicrm",
+      "curl -oL l10n.tar.gz https://download.civicrm.org/civicrm-5.11.0-l10n.tar.gz",
+      "tar -xvzf l10n.tar.gz -C web/app/plugins/civicrm/",
       "rm -f l10n.tar.gz"
       ]
   }
