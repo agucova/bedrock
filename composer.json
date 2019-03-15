@@ -30,6 +30,18 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+           "name": "civicrm/civicrm",
+           "type": "wordpress-plugin",
+        "version": "5.11.0",
+           "dist": {
+               "type": "zip",
+               "url": "https://download.civicrm.org/civicrm-5.11.0-wordpress.zip
+          }
+       }
     }
   ],
   "require": {
@@ -39,7 +51,10 @@
     "oscarotero/env": "^1.1.0",
     "roots/wordpress": "5.1.1",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-plugin/civicrm-admin-utilities": "^0.6.5",
+    "civicrm/civicrm": "5.11.0",
+    "curl/curl": "^2.2.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
@@ -59,6 +74,10 @@
     ],
     "test": [
       "phpcs"
-    ]
+    ],
+    "l10n": [
+      "curl -o l10n.tar.gz https://download.civicrm.org/civicrm-5.11.0-l10n.tar.gz",
+      "tar -xvzf l10n.tar.gz -C web/app/plugins/civicrm/civicrm",
+      "rm -f l10n.tar.gz"
   }
 }
